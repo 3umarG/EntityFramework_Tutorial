@@ -8,6 +8,10 @@ internal class Program
         using (EnterpriseContext context = new EnterpriseContext())
         {
 
+            // the bad way of recreate the structure of DB
+            // People before invention of the DB Migration
+            context.Database.EnsureDeleted();
+
             // for create the Database if it is not created , if 
             // to ensure that the database is created
             context.Database.EnsureCreated();
@@ -59,6 +63,7 @@ internal class Program
             #endregion
 
             #region Delete 
+            /*
             Console.WriteLine($"Table before delete : {context.Departments.Count()}");
             Console.WriteLine($"Local Table before delete : {context.Departments.Local.Count()}"); // 0
 
@@ -71,6 +76,15 @@ internal class Program
 
             Console.WriteLine($"Table After delete Changes Saved : {context.Departments.Count()}"); // -1 
             Console.WriteLine($"Local Table after delete changes Saved : {context.Departments.Local.Count()}"); // still zero
+            */
+            #endregion
+
+
+            #region Add new Data with the new Structure
+            TrainingCourse course = new TrainingCourse() { Name = "Database", Duration = 15 };
+            context.TrainingCourses.Add(course);
+            context.SaveChanges();
+
 
             #endregion
         }

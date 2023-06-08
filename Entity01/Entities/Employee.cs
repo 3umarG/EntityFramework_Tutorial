@@ -26,5 +26,11 @@ namespace Entity01
         // 2- Object Reference =====> Department Department
         // and the Navigation Prop. should be virtual modifier
         public virtual Department? Department { get; set; }
+
+        // Many - Many Relationship
+        // if the Table between the two tables of the relation doesn't have any new attributes
+        // only the composite PK I can annotate by define two Collections in the two sides of relation
+        // if there is another properties , i should create new class and assign them to it .
+        public virtual ICollection<TrainingCourse> Courses { get; set; } = new HashSet<TrainingCourse>();
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Entity01;
+using Microsoft.EntityFrameworkCore;
 
 internal class Program
 {
@@ -7,7 +8,8 @@ internal class Program
         // using ====> for Close/Dispose all resources you use after finishing all your work
         using (EnterpriseContext context = new EnterpriseContext())
         {
-
+            #region very bad Way for updating the DB
+            /*
             // the bad way of recreate the structure of DB
             // People before invention of the DB Migration
             context.Database.EnsureDeleted();
@@ -15,6 +17,14 @@ internal class Program
             // for create the Database if it is not created , if 
             // to ensure that the database is created
             context.Database.EnsureCreated();
+            */
+            #endregion
+
+            #region Migration :
+            // update-database from CLI
+            // OR
+            context.Database.Migrate();
+            #endregion
 
             #region Create DB and Insert some Dummy Rows
             /*
@@ -81,12 +91,17 @@ internal class Program
 
 
             #region Add new Data with the new Structure
-            TrainingCourse course = new TrainingCourse() { Name = "Database", Duration = 15 };
-            context.TrainingCourses.Add(course);
-            context.SaveChanges();
+            //TrainingCourse course = new TrainingCourse() { Name = "Database", Duration = 15 };
+            //context.TrainingCourses.Add(course);
 
 
             #endregion
+
+            #region Adding new records with Migration
+            context.Employees.Add(new Employee() { FName = "Omar", LName = "Gomaa", Address = "Egypt", Age = 21, Salary = 10000 });
+
+            #endregion
+            context.SaveChanges();
         }
     }
 }

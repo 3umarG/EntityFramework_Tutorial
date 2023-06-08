@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +22,9 @@ namespace Entity01
         public decimal Salary { get; set; }
 
         public int? Age { get; set; }
+
+        [MaxLength(40)]
+        public string Address { get; set; }
 
         // To make a navigational prop. you can reference to the other table by using
         // 1- Numeric Prop. for ref the ID   ====> int ID

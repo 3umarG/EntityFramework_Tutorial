@@ -4,6 +4,7 @@ using Mapping_Migration02.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mapping_Migration02.Migrations
 {
     [DbContext(typeof(CompanyContext))]
-    partial class CompanyContextModelSnapshot : ModelSnapshot
+    [Migration("20230609211648_EmployeeCreatedWithDataAnnotations")]
+    partial class EmployeeCreatedWithDataAnnotations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,7 +51,7 @@ namespace Mapping_Migration02.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Employees", (string)null);
+                    b.ToTable("Employees");
                 });
 #pragma warning restore 612, 618
         }

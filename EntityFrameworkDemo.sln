@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity01", "Entity01\Entity01.csproj", "{202704B9-128B-4EDB-976D-44B41C241775}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity01", "Entity01\Entity01.csproj", "{202704B9-128B-4EDB-976D-44B41C241775}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF_From_DB", "WF_From_DB\WF_From_DB.csproj", "{0407BBA1-0BB1-48FE-8E49-A0A4D0C158CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WF_From_DB", "WF_From_DB\WF_From_DB.csproj", "{0407BBA1-0BB1-48FE-8E49-A0A4D0C158CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mapping&Migration02", "Mapping&Migration02\Mapping&Migration02.csproj", "{99C42475-D586-423A-8168-CE42521FB92D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0407BBA1-0BB1-48FE-8E49-A0A4D0C158CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0407BBA1-0BB1-48FE-8E49-A0A4D0C158CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0407BBA1-0BB1-48FE-8E49-A0A4D0C158CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C42475-D586-423A-8168-CE42521FB92D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C42475-D586-423A-8168-CE42521FB92D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C42475-D586-423A-8168-CE42521FB92D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C42475-D586-423A-8168-CE42521FB92D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

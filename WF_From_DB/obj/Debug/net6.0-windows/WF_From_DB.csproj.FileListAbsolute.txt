@@ -23,7 +23,6 @@ D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Microsoft
 D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.dll
 D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Tokens.dll
-D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
 D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\System.IdentityModel.Tokens.Jwt.dll
 D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\System.Runtime.Caching.dll
 D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -46,3 +45,17 @@ D:\CS_projects\EntityFrameworkDemo\WF_From_DB\obj\Debug\net6.0-windows\refint\WF
 D:\CS_projects\EntityFrameworkDemo\WF_From_DB\obj\Debug\net6.0-windows\WF_From_DB.pdb
 D:\CS_projects\EntityFrameworkDemo\WF_From_DB\obj\Debug\net6.0-windows\WF_From_DB.genruntimeconfig.cache
 D:\CS_projects\EntityFrameworkDemo\WF_From_DB\obj\Debug\net6.0-windows\ref\WF_From_DB.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Azure.Core.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Azure.Identity.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Humanizer.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyModel.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Microsoft.IdentityModel.Abstractions.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Microsoft.SqlServer.Server.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\Mono.TextTemplating.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\System.Memory.Data.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\System.Text.Json.dll
+D:\CS_projects\EntityFrameworkDemo\WF_From_DB\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

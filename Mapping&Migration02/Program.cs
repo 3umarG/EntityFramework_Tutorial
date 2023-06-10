@@ -10,7 +10,7 @@ internal class Program
         using (CompanyContext context = new CompanyContext())
         {
             context.Database.Migrate();
-
+            /*
             var E = new Employee()
             {
                 Name = "Ziad",
@@ -28,7 +28,15 @@ internal class Program
             context.SaveChanges();
 
             Console.WriteLine(context.Entry(E).State);  // unchanged
+            */
 
+            var D1 = new Department() { Name = "IT" };
+            var D2 = new Department() { Name = "HR" };
+
+            context.Departments.Add(D1);
+            context.Departments.Add(D2);
+
+            context.SaveChanges();
         }
     }
 }

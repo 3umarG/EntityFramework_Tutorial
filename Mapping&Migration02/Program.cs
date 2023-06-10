@@ -36,6 +36,10 @@ internal class Program
             context.Departments.Add(D1);
             context.Departments.Add(D2);
 
+            var P1 = new Project() { ProjectName = "P01", Year = 2019 };
+            var P2 = new Project() { ProjectName = "P02", Year = 2022 };
+            context.AddRange(P1, P2);
+
             context.SaveChanges();
         }
     }

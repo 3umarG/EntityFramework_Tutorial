@@ -27,5 +27,12 @@ namespace Mapping_Migration02.Entities
         [MaxLength(100)]
         [EmailAddress]
         public string Email { get; set; }
+
+        //  that's make the CASCADE property when update or delete
+        [ForeignKey("Department")]
+        public int DeptID { get; set; }
+
+        [InverseProperty("Employees")]
+        public virtual Department Department { get; set; }
     }
 }

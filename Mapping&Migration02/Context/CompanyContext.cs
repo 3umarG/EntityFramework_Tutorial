@@ -1,5 +1,6 @@
 ﻿using Mapping_Migration02.Config;
 using Mapping_Migration02.Config.M_M;
+using Mapping_Migration02.Config.O_O.P_T;
 using Mapping_Migration02.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -47,6 +48,8 @@ namespace Mapping_Migration02.Context
             modelBuilder.ApplyConfiguration(new SubjectConfig());
             modelBuilder.ApplyConfiguration(new StudentSubjectConfig());
 
+            modelBuilder.ApplyConfiguration(new PaymentConfig());
+
             #region You can use this approach or you can split the configuration of each Entity by using Configuration Classes for every Entity
             /*
             modelBuilder.Entity<Department>(
@@ -71,5 +74,9 @@ namespace Mapping_Migration02.Context
         public virtual DbSet<Employee> Employees { get; set; }
 
         public virtual DbSet<Department> Departments { get; set; }
+
+        public virtual DbSet<Order> Orders { get; set; }
+
+        public virtual DbSet<Payment> Payments { get; set; }
     }
 }

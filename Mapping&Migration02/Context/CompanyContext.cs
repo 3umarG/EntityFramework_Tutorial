@@ -39,6 +39,7 @@ namespace Mapping_Migration02.Context
         {
             // to use fluent API from configuration classes for each Entity
             modelBuilder.ApplyConfiguration(new DepartmentConfig());
+            modelBuilder.ApplyConfiguration(new EmployeeConfig());
 
             #region You can use this approach or you can split the configuration of each Entity by using Configuration Classes for every Entity
             /*

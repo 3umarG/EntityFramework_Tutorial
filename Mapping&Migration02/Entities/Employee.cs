@@ -34,5 +34,10 @@ namespace Mapping_Migration02.Entities
 
         [InverseProperty("Employees")]
         public virtual Department Department { get; set; }
+
+
+        public int ProjId { get; set; }
+
+        public virtual Project Project { get; set; }
     }
 }

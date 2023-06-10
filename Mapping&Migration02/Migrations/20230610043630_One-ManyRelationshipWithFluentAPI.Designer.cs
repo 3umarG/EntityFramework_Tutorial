@@ -4,6 +4,7 @@ using Mapping_Migration02.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mapping_Migration02.Migrations
 {
     [DbContext(typeof(CompanyContext))]
-    partial class CompanyContextModelSnapshot : ModelSnapshot
+    [Migration("20230610043630_One-ManyRelationshipWithFluentAPI")]
+    partial class OneManyRelationshipWithFluentAPI
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,7 +42,7 @@ namespace Mapping_Migration02.Migrations
 
                     b.HasKey("DeptID");
 
-                    b.ToTable("Departments", (string)null);
+                    b.ToTable("Departments");
                 });
 
             modelBuilder.Entity("Mapping_Migration02.Entities.Employee", b =>
@@ -78,7 +81,7 @@ namespace Mapping_Migration02.Migrations
 
                     b.HasIndex("ProjId");
 
-                    b.ToTable("Employees", (string)null);
+                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("Mapping_Migration02.Entities.Project", b =>
@@ -98,7 +101,7 @@ namespace Mapping_Migration02.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Project", (string)null);
+                    b.ToTable("Project");
                 });
 
             modelBuilder.Entity("Mapping_Migration02.Entities.Employee", b =>

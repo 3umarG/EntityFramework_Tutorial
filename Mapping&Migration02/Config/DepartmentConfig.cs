@@ -15,15 +15,6 @@ namespace Mapping_Migration02.Config
         {
             builder.HasKey(D => D.DeptID);
 
-            builder 
-                    .Property(D => D.Name)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false); // varchar instead of nvarchar;
-
-            builder
-                    .Property(D => D.YearOfCreation)
-                    .IsRequired(true);
         }
     }
 }

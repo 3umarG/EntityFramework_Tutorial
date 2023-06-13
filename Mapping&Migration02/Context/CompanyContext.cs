@@ -1,5 +1,6 @@
 ﻿using Mapping_Migration02.Config;
 using Mapping_Migration02.Config.M_M;
+using Mapping_Migration02.Config.O_O.P_P;
 using Mapping_Migration02.Config.O_O.P_T;
 using Mapping_Migration02.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -48,7 +49,13 @@ namespace Mapping_Migration02.Context
             modelBuilder.ApplyConfiguration(new SubjectConfig());
             modelBuilder.ApplyConfiguration(new StudentSubjectConfig());
 
+            // Configuration for One-One Relation
+            // Partial-Total
             modelBuilder.ApplyConfiguration(new PaymentConfig());
+
+            // Partial-Partial
+            modelBuilder.ApplyConfiguration(new TeacherComputerConfig());
+
 
             #region You can use this approach or you can split the configuration of each Entity by using Configuration Classes for every Entity
             /*
@@ -78,5 +85,9 @@ namespace Mapping_Migration02.Context
         public virtual DbSet<Order> Orders { get; set; }
 
         public virtual DbSet<Payment> Payments { get; set; }
+
+        public virtual DbSet<Teacher> Teachers { get; set; }
+        public virtual DbSet<Computer> Computers { get; set; }
+        public virtual DbSet<TeacherComputer> TeachersComputers { get; set; }
     }
 }

@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mapping&Migration02", "Mapp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindDB01", "NorthwindDB01\NorthwindDB01.csproj", "{64F90E49-0F52-4E87-9B74-6C26DB1147E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{598509EF-A94C-4BB5-9174-2EF995E83903}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{64F90E49-0F52-4E87-9B74-6C26DB1147E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64F90E49-0F52-4E87-9B74-6C26DB1147E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64F90E49-0F52-4E87-9B74-6C26DB1147E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{598509EF-A94C-4BB5-9174-2EF995E83903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{598509EF-A94C-4BB5-9174-2EF995E83903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{598509EF-A94C-4BB5-9174-2EF995E83903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{598509EF-A94C-4BB5-9174-2EF995E83903}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

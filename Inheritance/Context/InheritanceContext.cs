@@ -15,6 +15,13 @@ namespace Inheritance.Context
             optionsBuilder.UseSqlServer("Data Source=DESKTOP-EF44UM4\\SQLEXPRESS;Initial Catalog=InheritanceEF;Integrated Security=True;TrustServerCertificate=True");
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // that for apply the configuration of Table Per Hirarechy "TPH"
+            modelBuilder.Entity<Student>().HasBaseType<Person>();
+            modelBuilder.Entity<Teacher>().HasBaseType<Person>();
+        }
+
         #region Inheritance Mapping
         /// When use Multiple DbSet(s) for every class by default the EF map it to TPC : Table Per Class
         /// Table for every Entity

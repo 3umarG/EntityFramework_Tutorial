@@ -18,8 +18,17 @@ namespace Inheritance.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // that for apply the configuration of Table Per Hirarechy "TPH"
-            modelBuilder.Entity<Student>().HasBaseType<Person>();
-            modelBuilder.Entity<Teacher>().HasBaseType<Person>();
+            //modelBuilder.Entity<Student>().HasBaseType<Person>();
+            //modelBuilder.Entity<Teacher>().HasBaseType<Person>();
+
+
+            // add Discriminator mannually from my Parent Class , and control its values based on bool , Enums ...
+            modelBuilder.Entity<Person>()
+                .HasDiscriminator(P => P.IsEmployee)
+                .HasValue<Teacher>(true)
+                .HasValue<Student>(false);
+
+            base.OnModelCreating(modelBuilder);
         }
 
         #region Inheritance Mapping

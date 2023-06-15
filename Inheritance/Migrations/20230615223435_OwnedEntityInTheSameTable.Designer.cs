@@ -4,6 +4,7 @@ using Inheritance.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Inheritance.Migrations
 {
     [DbContext(typeof(InheritanceContext))]
-    partial class InheritanceContextModelSnapshot : ModelSnapshot
+    [Migration("20230615223435_OwnedEntityInTheSameTable")]
+    partial class OwnedEntityInTheSameTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,7 +70,7 @@ namespace Inheritance.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Stores");
+                    b.ToTable("Store");
                 });
 
             modelBuilder.Entity("Inheritance.Entities.Student", b =>
@@ -124,7 +127,7 @@ namespace Inheritance.Migrations
 
                             b1.HasKey("StoreID");
 
-                            b1.ToTable("FullAddress", (string)null);
+                            b1.ToTable("Store");
 
                             b1.WithOwner()
                                 .HasForeignKey("StoreID");

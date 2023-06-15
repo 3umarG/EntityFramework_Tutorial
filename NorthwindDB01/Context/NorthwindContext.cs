@@ -41,7 +41,7 @@ public partial class NorthwindContext : DbContext
         modelBuilder.Entity<TopCustomer>().HasNoKey();
         modelBuilder.Entity<ProductCategory>().HasNoKey();
 
-
+  
 
 
         modelBuilder.Entity<Category>(entity =>

@@ -17,6 +17,9 @@ namespace Inheritance.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+
+            #region Inheritance
             /// that for apply the configuration of Table Per Hirarechy "TPH"
             //modelBuilder.Entity<Student>().HasBaseType<Person>();
             //modelBuilder.Entity<Teacher>().HasBaseType<Person>();
@@ -35,6 +38,23 @@ namespace Inheritance.Context
                 .HasValue<Student>("STD")
                 .HasValue<Teacher>("TCH");
 
+            #endregion
+
+            #region Owned Entity
+
+
+
+            /// if I use this format EF will map the Owned Entity to Multiple Columns in the Table as Composite Attribue  
+            //modelBuilder.Entity<Store>()
+            //    .OwnsOne(St => St.FullAddress);
+
+            /// If I want to Apply Normalization and make new Table for this Composite Attributes , I only add ToTable()
+            /// but in that case I prefer the Joins than the Normalization , If I want any information about FullAddress
+            /// I should make Join
+            modelBuilder.Entity<Store>()
+                .OwnsOne(St => St.FullAddress)
+                .ToTable("FullAddress");
+            #endregion
             base.OnModelCreating(modelBuilder);
         }
 
@@ -51,6 +71,7 @@ namespace Inheritance.Context
 
         #region Inheritance Mapping : TPH + DbSet for Only the Hirarechy
         public virtual DbSet<Person> People { get; set; }
+        public virtual DbSet<Store> Stores { get; set; }
         #endregion
 
     }

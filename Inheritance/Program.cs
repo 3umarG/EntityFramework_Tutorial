@@ -6,7 +6,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        using(InheritanceContext context = new InheritanceContext())
+        using (InheritanceContext context = new InheritanceContext())
         {
             context.Database.Migrate();
 
@@ -22,6 +22,7 @@ internal class Program
 
 
             #region DbSet for only one hirarechy
+            /*
             //context.Add(new Teacher() { FullName = "Teacher 02", Age = 65, HireDate = new DateTime(2020, 5, 30) });
             //context.Add(new Student() { FullName = "Student 02", Age = 22, Grade = 97 });
 
@@ -34,8 +35,23 @@ internal class Program
             {
                 Console.WriteLine($"Teacher : {teacher.FullName} with Grade : {teacher.Age}");
             }
-
+            */
             #endregion
+
+            context.Stores.Add(new Store()
+
+            {
+                FullAddress = new FullAddress()
+                {
+                    FirstAddress = "Egypt",
+                    CountryCode = "7895",
+                    SecondAddress = "Ghrabia",
+                    ZipCode = "5365",
+                    ThirdAddress = "Tanta"
+                },
+                StoreName = "St 02",
+                Rate = 8
+            });
 
             context.SaveChanges();
         }

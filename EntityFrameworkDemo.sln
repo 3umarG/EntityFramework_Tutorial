@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindDB01", "NorthwindD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{598509EF-A94C-4BB5-9174-2EF995E83903}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindReversedPowerTools", "NorthwindReversedPowerTools\NorthwindReversedPowerTools.csproj", "{99E88F7D-2C80-41E6-A770-62B0648FD0B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{598509EF-A94C-4BB5-9174-2EF995E83903}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{598509EF-A94C-4BB5-9174-2EF995E83903}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{598509EF-A94C-4BB5-9174-2EF995E83903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99E88F7D-2C80-41E6-A770-62B0648FD0B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E88F7D-2C80-41E6-A770-62B0648FD0B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E88F7D-2C80-41E6-A770-62B0648FD0B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E88F7D-2C80-41E6-A770-62B0648FD0B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

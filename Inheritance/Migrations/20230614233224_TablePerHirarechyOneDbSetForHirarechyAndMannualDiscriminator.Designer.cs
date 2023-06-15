@@ -4,6 +4,7 @@ using Inheritance.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Inheritance.Migrations
 {
     [DbContext(typeof(InheritanceContext))]
-    partial class InheritanceContextModelSnapshot : ModelSnapshot
+    [Migration("20230614233224_TablePerHirarechyOneDbSetForHirarechyAndMannualDiscriminator")]
+    partial class TablePerHirarechyOneDbSetForHirarechyAndMannualDiscriminator
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

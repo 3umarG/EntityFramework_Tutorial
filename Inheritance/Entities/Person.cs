@@ -14,19 +14,19 @@ namespace Inheritance.Entities
 
         public int Age { get; set; }
 
-        public bool IsEmployee { get; protected set; }
+        //public bool IsEmployee { get; protected set; }
 
     }
 
     public class Teacher : Person
     {
-        public Teacher() => IsEmployee = true;
+        //public Teacher() => IsEmployee = true;
         public DateTime HireDate { get; set; }
     }
 
     public class Student : Person
     {
-        public Student() => IsEmployee = false;
+        //public Student() => IsEmployee = false;
         public decimal Grade { get; set; }
 
     }

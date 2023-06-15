@@ -56,7 +56,8 @@ namespace NorthwindDB01
 
         private void DTO_Extract()
         {
-            // this for preview a non-entity element from DB by using SP , or SQL Raw statements .
+            // this for preview a non-entity element from DB by using SP , or SQL Raw statements . 
+            // using " Set<> "
             GV1.DataSource =
                 context
                 .Set<TopCustomer>()
@@ -79,6 +80,22 @@ namespace NorthwindDB01
         private void button1_Click(object sender, EventArgs e)
         {
             context.SaveChanges();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            var newName = "Updated Name";
+            var rowsAffected = context.Database.ExecuteSqlInterpolated($"Update Products Set ProductName = {newName} Where ProductID = 5");
+            if (rowsAffected > 0)
+            {
+                this.Text = ($"{rowsAffected} Rows Affected .");
+            }
+            else
+            {
+                this.Text = ("There is not Rows Affected");
+            }
+
         }
     }
 }

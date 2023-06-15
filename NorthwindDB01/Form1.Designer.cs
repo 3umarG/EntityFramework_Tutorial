@@ -30,12 +30,13 @@
         {
             button1 = new Button();
             GV1 = new DataGridView();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)GV1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(360, 308);
+            button1.Location = new Point(423, 315);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
@@ -53,11 +54,22 @@
             GV1.Size = new Size(776, 290);
             GV1.TabIndex = 1;
             // 
+            // button2
+            // 
+            button2.Location = new Point(306, 315);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 2;
+            button2.Text = "Update";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
             Controls.Add(GV1);
             Controls.Add(button1);
             Name = "Form1";
@@ -72,5 +84,6 @@
 
         private Button button1;
         private DataGridView GV1;
+        private Button button2;
     }
 }

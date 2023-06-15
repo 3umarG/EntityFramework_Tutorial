@@ -32,7 +32,12 @@ public partial class NorthwindContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         /// Handle all DTO
+        /// 
+
+        // that for view
         modelBuilder.Entity<ProductSalesfor1997>().HasNoKey().ToView("Product Sales for 1997");
+        
+        // that for Stored Procedures Return
         modelBuilder.Entity<TopCustomer>().HasNoKey();
         modelBuilder.Entity<ProductCategory>().HasNoKey();
 
